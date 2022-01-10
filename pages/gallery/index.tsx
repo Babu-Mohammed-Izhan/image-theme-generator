@@ -1,4 +1,4 @@
-const Pallettes = () => {
+const Gallery = () => {
   return (
     <div>
       <div></div>
@@ -6,4 +6,4 @@ const Pallettes = () => {
   );
 };
 
-export default Pallettes;
+export default Gallery;
