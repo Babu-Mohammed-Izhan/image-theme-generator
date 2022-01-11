@@ -15,7 +15,7 @@ interface CardType {
 const Colorschemecard = ({ cardData }: CardType) => {
   return (
     <div className="mx-10 flex items-center justify-center flex-col">
-      <h3>{cardData.title}</h3>
+      <h3 className="font-['Alfa_Slab_One']">{cardData.title}</h3>
       <div>
         {/* <Image src={`${cardData.url}`} alt={`${cardData.title}`} /> */}
       </div>
