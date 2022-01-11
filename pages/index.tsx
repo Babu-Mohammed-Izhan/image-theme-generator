@@ -24,8 +24,17 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Colorschemecard cardData={data[0]} />
-      <Colorschemecard cardData={data[0]} />
+      <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-y-7 mt-10 w-4/5 mx-auto">
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+      </div>
     </div>
   );
 };

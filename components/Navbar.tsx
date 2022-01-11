@@ -77,7 +77,7 @@ const Navbar = () => {
               </a>
             </Link>
 
-            <Link href="/products">
+            <Link href="/gallery">
               <a
                 className="
                     my-2
@@ -88,7 +88,7 @@ const Navbar = () => {
                 md:mx-4 md:my-0
               "
               >
-                Shop
+                Gallery
               </a>
             </Link>
             <Link href="/contact">
