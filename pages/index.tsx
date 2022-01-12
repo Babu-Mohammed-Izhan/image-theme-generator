@@ -29,14 +29,14 @@ const Home: NextPage = () => {
       <body className="font-inter">
         <div className="w-11/12 mx-auto md:py-40 py-16 px-6 bg-cover bg-no-repeat bg-center relative z-10">
           <div className="container max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl leading-tight md:text-6xl text-center text-black mb-3 font-extrabold">
+            <h1 className="text-3xl leading-tight md:text-6xl lg:text-8xl text-center text-black mb-3 font-extrabold">
               Get the{' '}
               <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
                 color
               </span>{' '}
               from your pictures.
             </h1>
-            <p className="text-lg md:text-3xl mt-16 text-center text-black max-w-sm md:max-w-2xl mx-auto font-medium">
+            <p className="text-xl md:text-3xl lg:text-5xl mt-16 text-center text-black max-w-sm md:max-w-4xl mx-auto font-medium">
               Image color theme extraction using AI.
             </p>
           </div>
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
               Examples of color extractions from user uploaded Images.
             </h3>
             <Link href="/gallery">
-              <a className="bg-black text-white px-4 py-3 no-underline">
+              <a className="bg-white text-black px-4 py-3 no-underline border-[6px] border-black">
                 See more examples
               </a>
             </Link>
