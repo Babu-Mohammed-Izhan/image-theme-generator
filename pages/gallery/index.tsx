@@ -25,6 +25,14 @@ const Gallery = () => {
         <Colorschemecard cardData={data[0]} />
         <Colorschemecard cardData={data[0]} />
         <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
+        <Colorschemecard cardData={data[0]} />
       </div>
     </div>
   );

@@ -36,14 +36,14 @@ const Footer = () => {
               md:text-2xl
               font-extrabold
                  cursor-pointer
-                 font-['Alfa_Slab_One']
+                 font-squarely
                  "
             >
               Chameleon
             </span>
           </Link>
           <p className="mt-2 text-sm text-gray-500">
-            Get colors from your pictures.
+            Get the color from your pictures.
           </p>
         </div>
         <div
@@ -72,13 +72,13 @@ const Footer = () => {
                 >
                   {a.title}
                 </h2>
-                <nav className="list-none mb-10">
+                <nav className="list-none mb-10 flex ">
                   {a &&
                     a.links.map((l) => {
                       return (
                         <Link href={l.link} key={l.name} passHref>
                           <li>
-                            <a className="text-gray-600 hover:text-gray-800 cursor-pointer">
+                            <a className="text-gray-600 hover:text-gray-800 cursor-pointer pr-7">
                               {l.name}
                             </a>
                           </li>

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+@font-face {
+  font-family: "Squarely";
+  src: local("Squarely"), url("../fonts/Squarely.ttf") format("ttf");
+}
+
 @tailwind utilities;
