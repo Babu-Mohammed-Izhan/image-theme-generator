@@ -1,19 +1,19 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import Colorschemecard from "../components/Colorschemecard";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import Colorschemecard from '../components/Colorschemecard';
 
 const Home: NextPage = () => {
   const data = [
     {
-      title: "Example",
-      url: "Example",
-      colorscheme1: "#8c5c2f",
-      colorscheme2: "#467492",
-      colorscheme3: "#4f301e",
-      colorscheme4: "#577d93",
-      colorscheme5: "#898e91",
+      title: 'Example',
+      url: 'Example',
+      colorscheme1: '#8c5c2f',
+      colorscheme2: '#467492',
+      colorscheme3: '#4f301e',
+      colorscheme4: '#577d93',
+      colorscheme5: '#898e91',
     },
   ];
   return (
@@ -26,19 +26,23 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed="">
-        <div className="w-full md:py-40 py-16 px-6 bg-cover bg-no-repeat bg-center relative z-10">
+      <body className="font-inter">
+        <div className="w-11/12 mx-auto md:py-40 py-16 px-6 bg-cover bg-no-repeat bg-center relative z-10">
           <div className="container max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl leading-tight md:text-6xl text-center text-black mb-3">
-              Get the color from your pictures.
+            <h1 className="text-3xl leading-tight md:text-6xl text-center text-black mb-3 font-extrabold">
+              Get the{' '}
+              <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
+                color
+              </span>{' '}
+              from your pictures.
             </h1>
-            <p className="text-lg md:text-4xl my-10 text-center text-black max-w-sm md:max-w-2xl mx-auto">
+            <p className="text-lg md:text-3xl mt-16 text-center text-black max-w-sm md:max-w-2xl mx-auto font-medium">
               Image color theme extraction using AI.
             </p>
           </div>
         </div>
 
-        <div className="w-full px-6 py-12 bg-white">
+        <div className="w-11/12 mx-auto px-6 py-12 bg-white">
           <div className="container max-w-4xl mx-auto text-center pb-10">
             <h3 className="text-xl md:text-4xl leading-tight text-center max-w-sm md:max-w-xl mx-auto text-gray-900 mb-12">
               Examples of color extractions from user uploaded Images.
@@ -50,7 +54,7 @@ const Home: NextPage = () => {
             </Link>
           </div>
 
-          <div className="w-4/5 mx-auto text-center grid md:grid-cols-3 grid-cols-1 gap-y-7 my-10">
+          <div className="w-11/12 mx-auto text-center grid md:grid-cols-3 grid-cols-1 gap-y-7 my-10">
             <Colorschemecard cardData={data[0]} />
             <Colorschemecard cardData={data[0]} />
             <Colorschemecard cardData={data[0]} />
@@ -58,7 +62,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="w-full px-6 py-20 text-left bg-black text-white leading-normal">
-          <div className="container max-w-4xl mx-auto flex justify-center flex-wrap md:flex-no-wrap">
+          <div className="w-11/12 mx-auto flex justify-center flex-wrap md:flex-no-wrap">
             <div className="w-full md:w-1-3">
               <h3 className="text-3xl mb-8 text-white leading-tight">
                 The AI powered color scheme producer.

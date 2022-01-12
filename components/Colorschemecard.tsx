@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 interface CardType {
   cardData: {
@@ -14,8 +14,8 @@ interface CardType {
 
 const Colorschemecard = ({ cardData }: CardType) => {
   return (
-    <div className="mx-2 flex items-center justify-between flex-col border-8 border-black max-w-xl h-48">
-      <h3 className="font-squarely">{cardData.title}</h3>
+    <div className="mx-2 flex items-center justify-between flex-col border-8 border-black max-w-xl h-60">
+      <h3>{cardData.title}</h3>
       <div>
         {/* <Image src={`${cardData.url}`} alt={`${cardData.title}`} /> */}
       </div>

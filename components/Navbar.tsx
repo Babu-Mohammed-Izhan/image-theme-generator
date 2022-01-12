@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { useState } from "react";
+import Link from 'next/link';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [hidden, setHidden] = useState(true);
@@ -23,12 +23,13 @@ const Navbar = () => {
             <Link href="/">
               <a
                 className="
-                font-['Alfa_Slab_One']
+                font-notable
                 text-black
                 text-xl
                 dark:text-white
                 md:text-2xl
                 font-extrabold
+                tracking-[5px]
               "
               >
                 Chameleon
@@ -60,7 +61,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className={`items-center md:flex ${hidden ? "hidden" : ""}`}>
+        <div className={`items-center md:flex ${hidden ? 'hidden' : ''}`}>
           <div className="flex flex-col md:flex-row md:mx-6">
             <Link href="/">
               <a

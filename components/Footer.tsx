@@ -1,13 +1,13 @@
-import Link from "next/link";
+import Link from 'next/link';
 const Footer = () => {
   const arr = [
     {
-      title: "SOCIALS",
+      title: 'SOCIALS',
       links: [
-        { name: "Twitter", link: "#" },
-        { name: "GitHub", link: "#" },
-        { name: "LinkedIn", link: "#" },
-        { name: "Instagram", link: "#" },
+        { name: 'Twitter', link: '#' },
+        { name: 'GitHub', link: '#' },
+        { name: 'LinkedIn', link: '#' },
+        { name: 'Instagram', link: '#' },
       ],
     },
   ];
@@ -17,7 +17,6 @@ const Footer = () => {
       <div
         className="
       container
-      px-5
       py-24
       mx-auto
       flex
@@ -36,7 +35,8 @@ const Footer = () => {
               md:text-2xl
               font-extrabold
                  cursor-pointer
-                 font-squarely
+                 font-notable
+                 tracking-[5px]
                  "
             >
               Chameleon
@@ -48,7 +48,9 @@ const Footer = () => {
         </div>
         <div
           className="
-        flex-grow flex flex-wrap
+        flex
+        items-center
+        justify-center
         md:pl-20
         -mb-10
         md:mt-0
@@ -59,7 +61,7 @@ const Footer = () => {
         >
           {arr.map((a) => {
             return (
-              <div key={a.title} className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <div key={a.title} className=" w-full px-4">
                 <h2
                   className="
             title-font
@@ -72,13 +74,13 @@ const Footer = () => {
                 >
                   {a.title}
                 </h2>
-                <nav className="list-none mb-10 flex ">
+                <nav className="list-none mb-10 md:flex ">
                   {a &&
                     a.links.map((l) => {
                       return (
                         <Link href={l.link} key={l.name} passHref>
                           <li>
-                            <a className="text-gray-600 hover:text-gray-800 cursor-pointer pr-7">
+                            <a className="text-gray-600 hover:text-gray-800 cursor-pointer md:pr-7">
                               {l.name}
                             </a>
                           </li>
@@ -94,12 +96,14 @@ const Footer = () => {
       <div className="bg-gray-100">
         <div
           className="
-        container
+          w-full
         mx-auto
-        py-4
         px-5
-        flex flex-wrap flex-col
-        sm:flex-row
+        py-4
+        flex
+        justify-center
+        md:justify-start
+        items-center
       "
         >
           <p className="text-gray-500 text-sm text-center sm:text-left">
