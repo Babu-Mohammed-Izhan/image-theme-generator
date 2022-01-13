@@ -1,6 +1,6 @@
-import Navbar from "./navbar";
-import Footer from "./footer";
-import { ReactNode } from "react";
+import Navbar from './navbar';
+import Footer from './footer';
+import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
@@ -9,10 +9,10 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="border-black border-[15px]">
+    <body className="border-8 border-black">
       <Navbar />
       <main>{children}</main>
       <Footer />
-    </div>
+    </body>
   );
 }
