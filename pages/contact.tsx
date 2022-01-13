@@ -1,22 +1,28 @@
 const Contact = () => {
   return (
-    <div className="container w-11/12 mx-auto md:mt-20 ">
+    <div className="container w-11/12 mx-auto md:mt-20 font-inter ">
       <div className="flex items-start justify-center flex-col">
-        <h1 className="text-6xl font-bold py-6">Get in touch</h1>
+        <h1 className="text-6xl font-bold py-6 font-notable tracking-widest">
+          Get in touch
+        </h1>
         <p className="pb-3 md:pr-64 text-gray-500">
           Send in your queries using the contact form below!
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 shadow-2xl rounded border-4 border-black">
-        <div className="py-14 px-3">
+        <div className="py-10 px-3">
           <div className="w-11/12 mx-auto">
-            <h3 className="text-3xl font-semibold pb-6">Contact Information</h3>
+            <h3 className="text-3xl font-semibold pb-6 font-notable tracking-widest">
+              Contact Information
+            </h3>
             <p className="py-2">Phone: +91 99445-45113</p>
             <p className="py-2">Email: babuizhan1234@gmail.com</p>
           </div>
         </div>
         <div className="w-11/12 mx-auto h-full grid py-10 px-3">
-          <h1 className="text-2xl font-semibold pb-6">Send us a Message</h1>
+          <h1 className="text-2xl font-semibold pb-10 font-notable tracking-widest">
+            Send us a Message
+          </h1>
           <form>
             <div className="grid grid-cols-2 gap-x-6 pb-4 w-10/12 md:w-full">
               <div className="flex flex-col">

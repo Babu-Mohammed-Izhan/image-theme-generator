@@ -22,8 +22,11 @@ const Footer = () => {
       flex
       md:items-center
       lg:items-start
-      md:flex-row md:flex-nowrap
-      flex-wrap flex-col
+      md:flex-row 
+      md:flex-nowrap
+      flex-wrap 
+      flex-col
+      md:justify-between
     "
       >
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
@@ -64,12 +67,12 @@ const Footer = () => {
               <div key={a.title} className=" w-full px-4">
                 <h2
                   className="
-            title-font
             font-medium
             text-gray-900
             tracking-widest
             text-sm
             mb-3
+            md:text-right
           "
                 >
                   {a.title}
@@ -80,7 +83,7 @@ const Footer = () => {
                       return (
                         <Link href={l.link} key={l.name} passHref>
                           <li>
-                            <a className="text-gray-600 hover:text-gray-800 cursor-pointer md:pr-7">
+                            <a className="text-gray-600 hover:text-gray-800 cursor-pointer md:pl-7">
                               {l.name}
                             </a>
                           </li>

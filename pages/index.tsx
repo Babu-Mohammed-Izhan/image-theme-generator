@@ -29,9 +29,9 @@ const Home: NextPage = () => {
       <body className="font-inter">
         <div className="w-11/12 mx-auto md:py-40 py-16 px-6 bg-cover bg-no-repeat bg-center relative z-10">
           <div className="container max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl leading-tight md:text-5xl lg:text-6xl text-center text-black mb-3 font-extrabold">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-black mb-3 font-extrabold lg:leading-relaxed">
               Get the{' '}
-              <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text px-3">
+              <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text lg:px-3">
                 color
               </span>{' '}
               from your pictures.
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="w-11/12 mx-auto px-6 py-12 bg-white">
-          <h3 className="text-xl md:text-4xl leading-tight text-center max-w-sm md:max-w-xl mx-auto text-gray-900 mb-12">
+          <h3 className="text-xl md:text-4xl leading-tight text-center max-w-sm md:max-w-xl mx-auto text-gray-900 mb-12 font-bold">
             Examples of color extractions from user uploaded Images.
           </h3>
 
