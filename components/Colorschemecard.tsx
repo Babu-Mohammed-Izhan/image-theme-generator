@@ -14,12 +14,12 @@ interface CardType {
 
 const Colorschemecard = ({ cardData }: CardType) => {
   return (
-    <div className="mx-2 flex items-center justify-between flex-col border-8 border-black max-w-xl h-60">
-      <h3>{cardData.title}</h3>
+    <div className="mx-2 flex items-center justify-between flex-col border-[6px] border-black rounded max-w-xl h-60 shadow">
+      <h3 className="font-notable">{cardData.title}</h3>
       <div>
         {/* <Image src={`${cardData.url}`} alt={`${cardData.title}`} /> */}
       </div>
-      <div className="grid grid-cols-5 h-10 w-full">
+      <div className="grid grid-cols-5 h-12 w-full">
         <div
           className="w-full hover:cursor-pointer"
           style={{

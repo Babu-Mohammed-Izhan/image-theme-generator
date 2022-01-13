@@ -8,7 +8,7 @@ const Navbar = () => {
     setHidden(!hidden);
   };
   return (
-    <nav className="bg-white shadow dark:bg-gray-800">
+    <nav className="bg-white dark:bg-gray-800">
       <div
         className="
           container
@@ -19,7 +19,7 @@ const Navbar = () => {
         "
       >
         <div className="flex items-center justify-between">
-          <div>
+          <div className="pt-1">
             <Link href="/">
               <a
                 className="
@@ -61,12 +61,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className={`items-center md:flex ${hidden ? 'hidden' : ''}`}>
-          <div className="flex flex-col md:flex-row md:mx-6">
+        <div className={`items-center md:flex ${hidden ? 'hidden' : ''} `}>
+          <div className="flex flex-col md:flex-row md:mx-6 md:mt-3">
             <Link href="/">
               <a
                 className="
-                my-2
+                pt-1
                 text-gray-700
                 dark:text-gray-200
                 hover:text-indigo-500
@@ -81,7 +81,7 @@ const Navbar = () => {
             <Link href="/gallery">
               <a
                 className="
-                    my-2
+                pt-1
                 text-gray-700
                 dark:text-gray-200
                 hover:text-indigo-500
@@ -95,7 +95,7 @@ const Navbar = () => {
             <Link href="/contact">
               <a
                 className="
-                    my-2
+                pt-1
                 text-gray-700
                 dark:text-gray-200
                 hover:text-indigo-500
@@ -109,7 +109,7 @@ const Navbar = () => {
             <Link href="/about">
               <a
                 className="
-                    my-2
+                pt-1
                 text-gray-700
                 dark:text-gray-200
                 hover:text-indigo-500
@@ -119,6 +119,22 @@ const Navbar = () => {
               >
                 About
               </a>
+            </Link>
+            <Link href="/generate" passHref>
+              <button
+                className="
+                font-bold
+                px-2
+                border-black
+                border-4
+                rounded-sm
+                md:mx-4 
+                hover:bg-black
+                hover:text-white
+              "
+              >
+                Generate
+              </button>
             </Link>
           </div>
         </div>
