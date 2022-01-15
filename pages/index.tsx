@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="font-inter">
-        <div className="w-11/12 mx-auto md:py-40 py-16 px-6 bg-cover bg-no-repeat bg-center relative z-10">
+        <div className="w-11/12 mx-auto md:py-32 py-16 px-6 bg-cover bg-no-repeat bg-center relative z-10">
           <div className="container max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-black mb-3 font-extrabold lg:leading-relaxed">
               Get the{' '}

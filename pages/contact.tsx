@@ -9,7 +9,7 @@ const Contact = () => {
           Send in your queries using the contact form below!
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 shadow-2xl rounded border-4 border-black">
+      <div className="md:grid grid-cols-1 lg:grid-cols-2 mt-20 shadow-2xl rounded border-4 border-black">
         <div className="py-10 px-3">
           <div className="w-11/12 mx-auto">
             <h3 className="text-3xl font-semibold pb-6 font-notable tracking-widest">
@@ -19,12 +19,12 @@ const Contact = () => {
             <p className="py-2">Email: babuizhan1234@gmail.com</p>
           </div>
         </div>
-        <div className="w-11/12 mx-auto h-full grid py-10 px-3">
-          <h1 className="text-2xl font-semibold pb-10 font-notable tracking-widest">
+        <div className="w-11/12 mx-auto h-full md:grid py-10 px-3">
+          <h1 className="text-base md:text-2xl font-semibold pb-10 font-notable tracking-widest">
             Send us a Message
           </h1>
-          <form>
-            <div className="grid grid-cols-2 gap-x-6 pb-4 w-10/12 md:w-full">
+          <form className="w-11/12 mx-auto">
+            <div className="md:grid md:grid-cols-2 gap-x-6 pb-4 w-10/12 md:w-full">
               <div className="flex flex-col">
                 <label
                   htmlFor="firstname"
@@ -54,7 +54,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-6 pb-4 w-10/12 md:w-full">
+            <div className="md:grid md:grid-cols-2 gap-x-6 pb-4 w-10/12 md:w-full">
               <div className="flex flex-col ">
                 <label htmlFor="email" className=" text-lg font-semibold pb-2">
                   Email

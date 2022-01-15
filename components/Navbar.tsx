@@ -11,7 +11,6 @@ const Navbar = () => {
     <nav className="bg-white dark:bg-gray-800">
       <div
         className="
-          container
           px-6
           py-3
           mx-auto
