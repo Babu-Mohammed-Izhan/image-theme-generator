@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <div className="container w-11/12 mx-auto md:mt-20 font-inter ">
       <div className="flex items-start justify-center flex-col">
-        <h1 className="text-6xl font-bold py-6 font-notable tracking-widest">
+        <h1 className="text-3xl md:text-6xl font-bold py-6 font-notable tracking-widest">
           Get in touch
         </h1>
         <p className="pb-3 md:pr-64 text-gray-500">
@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="md:grid grid-cols-1 lg:grid-cols-2 mt-20 shadow-2xl rounded border-4 border-black">
         <div className="py-10 px-3">
           <div className="w-11/12 mx-auto">
-            <h3 className="text-3xl font-semibold pb-6 font-notable tracking-widest">
+            <h3 className="text-xl md:text-3xl font-semibold pb-6 font-notable tracking-widest">
               Contact Information
             </h3>
             <p className="py-2">Phone: +91 99445-45113</p>

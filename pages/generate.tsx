@@ -36,29 +36,42 @@ const Generate = () => {
 
   return (
     <section>
-      <div className="w-5/6 mx-auto py-10">
-        <div className="pb-28">
+      <div className="w-11/12 md:w-5/6 mx-auto py-10">
+        <div className="pb-20">
           <h3 className="font-notable text-2xl md:text-3xl lg:text-4xl">
             Generate
           </h3>
         </div>
-        <div className="w-full mx-auto pb-32 mt-10 shadow-2xl rounded border-4 border-black">
+        <div className="w-full mx-auto py-10 shadow-2xl rounded border-4 border-black">
           <form
             onSubmit={handleSubmit}
-            className="flex items-center justify-between flex-col h-36 mt-20 w-11/12 mx-auto"
+            className="flex items-start justify-between flex-col  my-12 w-11/12 mx-auto"
           >
+            <label
+              htmlFor="title"
+              className=" text-lg font-semibold pb-2 font-notable"
+            >
+              Title
+            </label>
             <input
               type="text"
               name="title"
               id="title"
-              className="border-4 border-black rounded px-2 py-1"
+              className="border-4 border-black rounded px-2 py-1 w-4/5"
               onChange={(e) => setTitle(e.target.value)}
             />
+
+            <label
+              htmlFor="image"
+              className=" text-lg font-semibold pb-2 pt-7 font-notable"
+            >
+              Picture
+            </label>
             <input
               type="file"
               name="image"
               id="image"
-              className="flex items-center justify-between flex-col"
+              className="pb-12 w-4/5"
               onChange={(e) =>
                 e.target.files ? setFile(e.target.files[0]) : null
               }
