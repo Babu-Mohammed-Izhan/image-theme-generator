@@ -29,7 +29,7 @@ const Footer = () => {
       md:justify-between
     "
       >
-        <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left px-10">
           <Link href="/" passHref>
             <span
               className=" text-black
