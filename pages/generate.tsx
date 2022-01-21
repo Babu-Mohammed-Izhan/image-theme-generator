@@ -57,7 +57,7 @@ const Generate = () => {
               type="text"
               name="title"
               id="title"
-              className="border-4 border-black rounded px-2 py-1 w-4/5"
+              className="border-4 border-black rounded px-2 py-1 w-4/5 max-w-xl"
               onChange={(e) => setTitle(e.target.value)}
             />
 
