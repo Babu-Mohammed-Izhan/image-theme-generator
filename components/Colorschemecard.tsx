@@ -33,7 +33,7 @@ const Colorschemecard = ({ cardData }: CardType) => {
             setClipboard(cardData.colorscheme1);
           }}
         >
-          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-9 px-3 pointer-events-none mb-2">
+          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 mr-10 px-3 pointer-events-none mb-2">
             {clipboard === cardData.colorscheme1
               ? 'Copied!'
               : cardData.colorscheme1}
@@ -61,7 +61,7 @@ const Colorschemecard = ({ cardData }: CardType) => {
             setClipboard(cardData.colorscheme2);
           }}
         >
-          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-9 px-3 pointer-events-none mb-2">
+          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 mr-10 px-3 pointer-events-none mb-2">
             {clipboard === cardData.colorscheme2
               ? 'Copied!'
               : cardData.colorscheme2}
@@ -89,7 +89,7 @@ const Colorschemecard = ({ cardData }: CardType) => {
             setClipboard(cardData.colorscheme3);
           }}
         >
-          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-9 px-3 pointer-events-none mb-2">
+          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 mr-10 px-3 pointer-events-none mb-2">
             {clipboard === cardData.colorscheme3
               ? 'Copied!'
               : cardData.colorscheme3}
@@ -117,7 +117,7 @@ const Colorschemecard = ({ cardData }: CardType) => {
             setClipboard(cardData.colorscheme4);
           }}
         >
-          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-9 px-3 pointer-events-none mb-2">
+          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 mr-10 px-3 pointer-events-none mb-2">
             {clipboard === cardData.colorscheme4
               ? 'Copied!'
               : cardData.colorscheme4}
@@ -145,7 +145,7 @@ const Colorschemecard = ({ cardData }: CardType) => {
             setClipboard(cardData.colorscheme5);
           }}
         >
-          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-9 px-3 pointer-events-none mb-2">
+          <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 mr-10 px-3 pointer-events-none mb-2">
             {clipboard === cardData.colorscheme5
               ? 'Copied!'
               : cardData.colorscheme5}
