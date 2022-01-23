@@ -5,13 +5,10 @@ import fs from 'fs';
 const Generate = () => {
   const [file, setFile] = useState<File>();
   const [title, setTitle] = useState<string>();
-  console.log(file);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(file);
     const cloudName = 'dm8ogh4lv';
-    const upload_preset = 'w9skdyeo';
 
     const formData = new FormData();
     formData.append('file', file ? file : '');
@@ -20,18 +17,24 @@ const Generate = () => {
     fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
       method: 'POST',
       body: formData,
-    }).then((res) => {
-      axios
-        .post('http://localhost:3001/api/upload', {
-          body: {
+    })
+      .then((res) => {
+        return res.text();
+      })
+      .then((data) => {
+        console.log(JSON.parse(data));
+        const urlData = JSON.parse(data);
+
+        axios
+          .post('http://localhost:3001/api/upload', {
             title: title,
-            url: res.url,
-          },
-        })
-        .then((res) => {
-          console.log(res);
-        });
-    });
+            url: urlData.url,
+          })
+          .then((res) => {
+            console.log(res);
+          });
+        setTitle('');
+      });
   };
 
   return (
@@ -57,6 +60,7 @@ const Generate = () => {
               type="text"
               name="title"
               id="title"
+              value={title}
               className="border-4 border-black rounded px-2 py-1 w-4/5 max-w-xl"
               onChange={(e) => setTitle(e.target.value)}
             />
