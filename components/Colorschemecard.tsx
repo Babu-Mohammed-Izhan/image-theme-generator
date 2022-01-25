@@ -10,11 +10,14 @@ const Colorschemecard = ({ cardData }: CardType) => {
   const [clipboard, setClipboard] = useState('');
 
   return (
-    <div className="mx-2 flex items-center justify-between flex-col border-[6px] border-black rounded max-w-xl h-60 shadow">
-      <h3 className="font-notable">{cardData.title}</h3>
-      <div>
-        <Image src={`${cardData.imgurl}`} alt={`${cardData.title}`} />
-      </div>
+    <div className="mx-2 flex justify-between flex-col border-[6px] border-black rounded h-60 shadow max-w-xs">
+      <h3 className="font-notable text-center">{cardData.title}</h3>
+      <Image
+        src={`${cardData.imgurl}`}
+        alt={`${cardData.title}`}
+        width="95%"
+        height="155px"
+      />
       <div className="grid grid-cols-5 h-12 w-full">
         <div
           className="w-full hover:cursor-pointer group cursor-pointer relative inline-block text-center"

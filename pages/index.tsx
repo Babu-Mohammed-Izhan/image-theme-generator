@@ -1,19 +1,26 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import axios from 'axios';
+
+import { ImageType } from '../types';
 import Link from 'next/link';
 import Colorschemecard from '../components/Colorschemecard';
 
-const Home: NextPage = () => {
+interface GalleryType {
+  cardData: ImageType[];
+}
+
+const Home = ({ cardData }: GalleryType) => {
   const data = [
     {
+      id: 1,
       title: 'Example',
-      url: 'Example',
-      colorscheme1: '#8c5c2f',
-      colorscheme2: '#467492',
-      colorscheme3: '#4f301e',
-      colorscheme4: '#577d93',
-      colorscheme5: '#898e91',
+      imgurl: '',
+      colorScheme1: '#8c5c2f',
+      colorScheme2: '#467492',
+      colorScheme3: '#4f301e',
+      colorScheme4: '#577d93',
+      colorScheme5: '#898e91',
     },
   ];
   return (
@@ -44,9 +51,9 @@ const Home: NextPage = () => {
 
         <div className="w-11/12 mx-auto px-6 pb-12 bg-white">
           <div className="w-11/12 mx-auto text-center grid md:grid-cols-3 grid-cols-1 gap-y-7 my-20 ">
-            <Colorschemecard cardData={data[0]} />
-            <Colorschemecard cardData={data[0]} />
-            <Colorschemecard cardData={data[0]} />
+            <Colorschemecard cardData={cardData[0]} />
+            <Colorschemecard cardData={cardData[0]} />
+            <Colorschemecard cardData={cardData[0]} />
           </div>
           <div className="container max-w-4xl mx-auto text-center pb-10">
             <Link href="/gallery">
@@ -81,5 +88,16 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getServerSideProps() {
+  const res = await axios(`${process.env.API_URL}/api/upload`);
+  console.log(res.data);
+
+  return {
+    props: {
+      cardData: res.data,
+    },
+  };
+}
 
 export default Home;

@@ -26,7 +26,7 @@ const Generate = () => {
         const urlData = JSON.parse(data);
 
         axios
-          .post('http://localhost:3001/api/upload', {
+          .post(`${process.env.API_URL}/api/upload`, {
             title: title,
             url: urlData.url,
           })
