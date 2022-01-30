@@ -11,18 +11,6 @@ interface GalleryType {
 }
 
 const Home = ({ cardData }: GalleryType) => {
-  const data = [
-    {
-      id: 1,
-      title: 'Example',
-      imgurl: '',
-      colorScheme1: '#8c5c2f',
-      colorScheme2: '#467492',
-      colorScheme3: '#4f301e',
-      colorScheme4: '#577d93',
-      colorScheme5: '#898e91',
-    },
-  ];
   return (
     <div>
       <Head>
@@ -36,9 +24,9 @@ const Home = ({ cardData }: GalleryType) => {
       <body className="font-inter">
         <div className="w-11/12 mx-auto md:pt-32 pt-24 pb-3 px-6 bg-cover bg-no-repeat bg-center relative z-10">
           <div className="container max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-black mb-3 font-extrabold lg:leading-relaxed">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-black mb-3 font-extrabold lg:leading-normal">
               Get the{' '}
-              <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text lg:px-3 ">
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text lg:px-3 ">
                 color
               </span>{' '}
               from your pictures.
@@ -49,11 +37,11 @@ const Home = ({ cardData }: GalleryType) => {
           </div>
         </div>
 
-        <div className="w-11/12 mx-auto px-6 pb-12 bg-white">
-          <div className="w-11/12 mx-auto text-center grid md:grid-cols-3 grid-cols-1 gap-y-7 my-20 ">
+        <div className="w-11/12 mx-auto pb-12 bg-white">
+          <div className="lg:w-3/4 w-full mx-auto text-center grid md:grid-cols-3 grid-cols-1 gap-5 my-20 ">
             <Colorschemecard cardData={cardData[0]} />
-            <Colorschemecard cardData={cardData[0]} />
-            <Colorschemecard cardData={cardData[0]} />
+            <Colorschemecard cardData={cardData[1]} />
+            <Colorschemecard cardData={cardData[2]} />
           </div>
           <div className="container max-w-4xl mx-auto text-center pb-10">
             <Link href="/gallery">

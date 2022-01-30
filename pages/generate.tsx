@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import fs from 'fs';
+import Colorschemecard from '../components/Colorschemecard';
+import { ImageType } from '../types';
 
 const Generate = () => {
   const [file, setFile] = useState<File>();
   const [title, setTitle] = useState<string>();
+  const [cardData, setCarddata] = useState<any>();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -31,7 +33,7 @@ const Generate = () => {
             url: urlData.url,
           })
           .then((res) => {
-            console.log(res);
+            setCarddata(res);
           });
         setTitle('');
       });
@@ -88,6 +90,7 @@ const Generate = () => {
             </button>
           </form>
         </div>
+        {cardData ? <Colorschemecard cardData={cardData} /> : ''}
       </div>
     </section>
   );

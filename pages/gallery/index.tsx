@@ -14,7 +14,7 @@ const Gallery = ({ cardData }: GalleryType) => {
           Gallery
         </h1>
       </div>
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-7 mt-8 w-4/5 mx-auto">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-5 mt-8 w-11/12 md:w-5/6 mx-auto">
         {cardData.map((data: ImageType) => {
           return <Colorschemecard key={data.id} cardData={data} />;
         })}
