@@ -25,7 +25,6 @@ const Gallery = ({ cardData }: GalleryType) => {
 
 export async function getServerSideProps() {
   const res = await axios(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`);
-  console.log(res.data);
 
   return {
     props: {

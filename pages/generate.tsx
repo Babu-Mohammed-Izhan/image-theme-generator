@@ -25,7 +25,6 @@ const Generate = () => {
         return res.text();
       })
       .then((data) => {
-        console.log(JSON.parse(data));
         const urlData = JSON.parse(data);
 
         axios
@@ -34,7 +33,6 @@ const Generate = () => {
             url: urlData.url,
           })
           .then((res) => {
-            console.log(res);
             if (res.status == 200) {
               router.push('/gallery');
             }
