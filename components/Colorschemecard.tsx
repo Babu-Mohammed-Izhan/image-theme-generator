@@ -12,7 +12,9 @@ const Colorschemecard = ({ cardData }: CardType) => {
   return (
     <div className="flex items-center justify-center w-full">
       <div className="flex justify-between flex-col border-4 border-black rounded h-96 shadow px-2 w-80">
-        <h3 className="font-notable text-center my-2">{cardData.title}</h3>
+        <h3 className="text-xl font-notable text-center my-2">
+          {cardData.title}
+        </h3>
         <Image
           src={`${cardData.imgurl}`}
           alt={`${cardData.title}`}

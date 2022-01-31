@@ -39,9 +39,9 @@ const Home = ({ cardData }: GalleryType) => {
 
         <div className="w-11/12 mx-auto pb-12 bg-white">
           <div className="lg:w-3/4 w-full mx-auto text-center grid md:grid-cols-3 grid-cols-1 gap-5 my-20 ">
-            <Colorschemecard cardData={cardData[0]} />
-            <Colorschemecard cardData={cardData[1]} />
-            <Colorschemecard cardData={cardData[2]} />
+            {cardData.map((c) => {
+              return <Colorschemecard key={c.id} cardData={c} />;
+            })}
           </div>
           <div className="container max-w-4xl mx-auto text-center pb-10">
             <Link href="/gallery">
@@ -78,12 +78,12 @@ const Home = ({ cardData }: GalleryType) => {
 };
 
 export async function getServerSideProps() {
-  const res = await axios(`${process.env.API_URL}/api/upload`);
+  const res = await axios(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`);
   console.log(res.data);
 
   return {
     props: {
-      cardData: res.data,
+      cardData: res.data.slice(0, 3),
     },
   };
 }

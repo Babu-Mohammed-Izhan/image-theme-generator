@@ -4,10 +4,12 @@ const Footer = () => {
     {
       title: 'SOCIALS',
       links: [
-        { name: 'Twitter', link: '#' },
-        { name: 'GitHub', link: '#' },
-        { name: 'LinkedIn', link: '#' },
-        { name: 'Instagram', link: '#' },
+        { name: 'Twitter', link: 'https://twitter.com/babu_izhan' },
+        { name: 'GitHub', link: 'https://github.com/Babu-Mohammed-Izhan' },
+        {
+          name: 'LinkedIn',
+          link: 'https://www.linkedin.com/in/babu-mohammed-izhan-3a327720b/',
+        },
       ],
     },
   ];
@@ -83,7 +85,12 @@ const Footer = () => {
                       return (
                         <Link href={l.link} key={l.name} passHref>
                           <li>
-                            <a className="text-gray-600 hover:text-gray-800 cursor-pointer md:pl-7">
+                            <a
+                              href={l.link}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-gray-600 hover:text-gray-800 cursor-pointer md:pl-7"
+                            >
                               {l.name}
                             </a>
                           </li>

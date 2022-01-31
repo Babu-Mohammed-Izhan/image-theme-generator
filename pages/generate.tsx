@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 import Colorschemecard from '../components/Colorschemecard';
 import { ImageType } from '../types';
 
 const Generate = () => {
   const [file, setFile] = useState<File>();
   const [title, setTitle] = useState<string>();
-  const [cardData, setCarddata] = useState<any>();
+  const router = useRouter();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -28,12 +29,15 @@ const Generate = () => {
         const urlData = JSON.parse(data);
 
         axios
-          .post(`${process.env.API_URL}/api/upload`, {
+          .post(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`, {
             title: title,
             url: urlData.url,
           })
           .then((res) => {
-            setCarddata(res);
+            console.log(res);
+            if (res.status == 200) {
+              router.push('/gallery');
+            }
           });
         setTitle('');
       });
@@ -90,7 +94,6 @@ const Generate = () => {
             </button>
           </form>
         </div>
-        {cardData ? <Colorschemecard cardData={cardData} /> : ''}
       </div>
     </section>
   );
