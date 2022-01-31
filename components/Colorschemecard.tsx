@@ -18,9 +18,9 @@ const Colorschemecard = ({ cardData }: CardType) => {
         <Image
           src={`${cardData.imgurl}`}
           alt={`${cardData.title}`}
-          width="320px"
-          height="320px"
-          className="aspect-square"
+          width="500px"
+          height="500px"
+          className="aspect-square overflow-hidden"
         />
         <div className="grid grid-cols-5 h-12 w-full my-2">
           <div
