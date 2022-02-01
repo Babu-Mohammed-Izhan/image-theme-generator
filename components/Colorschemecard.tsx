@@ -20,7 +20,7 @@ const Colorschemecard = ({ cardData }: CardType) => {
           alt={`${cardData.title}`}
           width="500px"
           height="500px"
-          className="aspect-square overflow-hidden"
+          className="aspect-square overflow-hidden object-cover"
         />
         <div className="grid grid-cols-5 h-12 w-full my-2">
           <div
