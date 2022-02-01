@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import Colorschemecard from '../components/Colorschemecard';
-import { ImageType } from '../types';
+import Head from 'next/head';
 
 const Generate = () => {
   const [file, setFile] = useState<File>();
@@ -43,6 +42,14 @@ const Generate = () => {
 
   return (
     <section>
+      <Head>
+        <title>Generate</title>
+        <meta
+          name="description"
+          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="w-11/12 md:w-5/6 mx-auto py-10">
         <div className="pb-20">
           <h3 className="font-notable text-2xl md:text-3xl lg:text-4xl">

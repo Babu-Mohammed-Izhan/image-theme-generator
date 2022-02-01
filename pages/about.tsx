@@ -1,6 +1,16 @@
+import Head from 'next/head';
+
 const About = () => {
   return (
     <div className="w-10/12 mx-auto flex flex-col justify-start items-center md:py-20">
+      <Head>
+        <title>About</title>
+        <meta
+          name="description"
+          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <h1 className="font-bold text-xl md:text-4xl lg:text-5xl my-12">
         Welcome to{' '}
         <span className="font-notable tracking-widest">Chameleon</span>

@@ -1,6 +1,16 @@
+import Head from 'next/head';
+
 const Contact = () => {
   return (
     <div className="container w-11/12 mx-auto md:mt-20 font-inter ">
+      <Head>
+        <title>Generate</title>
+        <meta
+          name="description"
+          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="flex items-start justify-center flex-col">
         <h1 className="text-3xl md:text-6xl font-bold py-6 font-notable tracking-widest">
           Get in touch

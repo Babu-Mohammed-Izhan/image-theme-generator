@@ -1,6 +1,7 @@
 import Colorschemecard from '../../components/Colorschemecard';
 import { ImageType } from '../../types';
 import axios from 'axios';
+import Head from 'next/head';
 
 interface GalleryType {
   cardData: ImageType[];
@@ -9,6 +10,14 @@ interface GalleryType {
 const Gallery = ({ cardData }: GalleryType) => {
   return (
     <div>
+      <Head>
+        <title>Gallery</title>
+        <meta
+          name="description"
+          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="w-11/12 mx-auto py-12 px-6">
         <h1 className="text-2xl leading-tight md:text-3xl font-extrabold font-notable">
           Gallery
