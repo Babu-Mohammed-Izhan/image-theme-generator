@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Head from 'next/head';
 import axios from 'axios';
 
@@ -77,7 +77,7 @@ const Home = ({ cardData }: GalleryType) => {
   );
 };
 
-export async function getServerSideProps() {
+export const getStaticProps = async () => {
   const res = await axios(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`);
 
   return {
