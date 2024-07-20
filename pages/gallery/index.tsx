@@ -32,7 +32,7 @@ const Gallery = ({ cardData }: GalleryType) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await axios(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`);
 
   return {
