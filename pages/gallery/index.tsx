@@ -1,20 +1,37 @@
-import Colorschemecard from '../../components/Colorschemecard';
-import { ImageType } from '../../types';
-import axios from 'axios';
-import Head from 'next/head';
+import { useEffect, useState } from "react";
+import Colorschemecard from "../../components/Colorschemecard";
+import { ImageType } from "../../types";
+import axios from "axios";
+import Head from "next/head";
 
 interface GalleryType {
   cardData: ImageType[];
 }
 
-const Gallery = ({ cardData }: GalleryType) => {
+const Gallery = ({ cardData: initialData }: GalleryType) => {
+  const [cardData, setCardData] = useState<ImageType[]>(initialData);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`);
+      setCardData(res.data);
+    };
+
+    fetchData();
+
+    // Optional: Polling for updates every 10 seconds
+    const interval = setInterval(fetchData, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       <Head>
         <title>Gallery</title>
         <meta
           name="description"
-          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+          content="Chameleon is a theme generator that uses your pictures to generate themes."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

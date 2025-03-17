@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import Image from "next/image";
 
 const Generate = () => {
   const [file, setFile] = useState<File>();
   const [title, setTitle] = useState<string>();
-  const [imgurl, setImgurl] = useState<string>('');
+  const [imgurl, setImgurl] = useState<string>("");
   const [loading, setLoading] = useState<Boolean>(false);
   const router = useRouter();
 
@@ -21,14 +21,14 @@ const Generate = () => {
     e.preventDefault();
     setLoading(true);
 
-    const cloudName = 'dm8ogh4lv';
+    const cloudName = "dm8ogh4lv";
 
     const formData = new FormData();
-    formData.append('file', file ? file : '');
-    formData.append('upload_preset', 'w9skdyeo');
+    formData.append("file", file ? file : "");
+    formData.append("upload_preset", "w9skdyeo");
 
     fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
-      method: 'POST',
+      method: "POST",
       body: formData,
     })
       .then((res) => {
@@ -44,11 +44,11 @@ const Generate = () => {
           })
           .then((res) => {
             if (res.status == 200) {
-              router.push('/gallery');
+              router.push("/gallery");
             }
           });
-        setTitle('');
-        setImgurl('');
+        setTitle("");
+        setImgurl("");
       });
   };
 
@@ -58,7 +58,7 @@ const Generate = () => {
         <title>Generate</title>
         <meta
           name="description"
-          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+          content="Chameleon is a theme generator that uses your pictures to generate themes."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -103,8 +103,8 @@ const Generate = () => {
                 e.target.files ? setFile(e.target.files[0]) : null
               }
             />
-            {imgurl === '' ? (
-              ''
+            {imgurl === "" ? (
+              ""
             ) : (
               <Image
                 width="500px"
@@ -137,7 +137,7 @@ const Generate = () => {
                     />
                   </svg>
                 ) : (
-                  'Send'
+                  "Send"
                 )}
               </button>
             </div>

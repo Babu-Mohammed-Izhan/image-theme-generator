@@ -1,10 +1,10 @@
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
-import Head from 'next/head';
-import axios from 'axios';
+import type { InferGetStaticPropsType, GetStaticProps } from "next";
+import Head from "next/head";
+import axios from "axios";
 
-import { ImageType } from '../types';
-import Link from 'next/link';
-import Colorschemecard from '../components/Colorschemecard';
+import { ImageType } from "../types";
+import Link from "next/link";
+import Colorschemecard from "../components/Colorschemecard";
 
 interface GalleryType {
   cardData: ImageType[];
@@ -17,7 +17,7 @@ const Home = ({ cardData }: GalleryType) => {
         <title>Chameleon</title>
         <meta
           name="description"
-          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+          content="Chameleon is a theme generator that uses your pictures to generate themes."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -25,14 +25,14 @@ const Home = ({ cardData }: GalleryType) => {
         <div className="w-11/12 mx-auto md:pt-32 pt-24 pb-3 px-6 bg-cover bg-no-repeat bg-center relative z-10">
           <div className="container max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-black mb-3 font-extrabold lg:leading-normal">
-              Get the{' '}
+              Get the{" "}
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text lg:px-3 ">
                 color
-              </span>{' '}
+              </span>{" "}
               from your pictures.
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl mt-10 text-center text-black max-w-xs md:max-w-2xl mx-auto font-medium">
-              Image color theme extraction using AI.
+              Image color theme extraction using the canvas.
             </p>
           </div>
         </div>
@@ -56,14 +56,14 @@ const Home = ({ cardData }: GalleryType) => {
           <div className="w-11/12 mx-auto flex justify-center flex-wrap md:flex-no-wrap">
             <div className="w-full md:w-1-3">
               <h3 className="text-3xl mb-8 text-white leading-tight">
-                The AI powered color scheme producer.
+                The full stack color theme producer.
               </h3>
 
               <p className="mb-5">
                 Chameleon is a website where users can upload any image and get
-                a color scheme matching the image. It uses AI to get the most
-                common colors from the image and finds the best suitable color
-                scheme from the available colors.
+                a color scheme matching the image. It uses the color-thief npm
+                package to analyze the image and extract the most prominent
+                colors.
               </p>
               <p>
                 The theme color are generated and placed below the image. They
@@ -85,6 +85,6 @@ export const getStaticProps = async () => {
       cardData: res.data.slice(0, 3),
     },
   };
-}
+};
 
 export default Home;

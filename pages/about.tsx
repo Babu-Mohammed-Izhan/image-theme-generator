@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 const About = () => {
   return (
@@ -7,12 +7,12 @@ const About = () => {
         <title>About</title>
         <meta
           name="description"
-          content="Chameleon is a theme generator that uses your pictures to generate themes using AI."
+          content="Chameleon is a theme generator that uses your pictures to generate themes."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="font-bold text-xl md:text-4xl lg:text-5xl my-12">
-        Welcome to{' '}
+        Welcome to{" "}
         <span className="font-notable tracking-widest">Chameleon</span>
       </h1>
       <p className="text-center">
