@@ -1,37 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Image Theme Generator
+
+Welcome to the Image Theme Generator! This project, along with the [`imagethemebackend`](https://github.com/Babu-Mohammed-Izhan/imagethemebackend.git) repository, represents my first full-stack project. The Image Theme Generator allows users to upload images and generate color schemes based on the image's colors.
+
+## How It Works
+
+1. **Image Upload**: Users can upload images to the application.
+2. **Cloudinary Integration**: The uploaded images are stored using Cloudinary.
+3. **Color Extraction**: The application uses the Colormind API to extract color schemes from the uploaded images.
+4. **Display**: All images along with their generated color schemes are displayed to the user.
+5. **Copy Colors**: Users can click on any color to copy its value to the clipboard.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/image-theme-generator.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd image-theme-generator
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: React, CSS
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Image Storage**: Cloudinary
+- **Color Extraction**: Colormind API
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Contributing
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For any questions or feedback, please reach out to me at [your-email@example.com].
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Enjoy using the Image Theme Generator!
 
 Specs:
 
@@ -48,7 +68,7 @@ Specs:
 
     all_data -> display-all-images-with-schemes
 
-    img upload -> cloudinary url -> image-color -> generate-scheme(colormind API)
+    img upload -> cloudinary url -> image-color -> generate-scheme(imagethemebackend API)
 
     Features:
 
